@@ -1,0 +1,43 @@
+<% include ../partials/header %>
+
+<div class="login-container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="text-center m-b-md">
+                <h3>Register here</h3>
+            </div>
+            <div class="hpanel">
+                <div class="panel-body">
+                <!-- Login Form -->
+                    <form action="#" method="post" name="register" id="register" class="form-signin" data-parsley-validate="">
+                        <h1 class="text-center main-logo row">Register Here</h1>
+                        <h3 class="form-signin-heading">Please sign in</h3>
+                        <div class="login-field">
+                            <label class="sr-only">First Name</label>
+                            <input type="text" placeholder="First Name" class="form-control" name="firstName" id="firstName" value="" required="required" data-parsley-required-message="First Name is required" data-parsley-maxlength="100"> 
+                            <label class="sr-only">Last Name</label>
+                            <input type="text" placeholder="Last Name" class="form-control" name="lastName" id="lastName" value="" required="required" data-parsley-required-message="Last Name is required" data-parsley-maxlength="100"> 
+                            <label class="sr-only">Email</label>
+                            <input type="email" placeholder="Email" class="form-control" name="email" id="email" value="" required="required" data-parsley-required-message="Email is required" data-parsley-maxlength="200">        
+                            <label class="sr-only">Password</label>
+                            <input type="password" placeholder="Password" class="form-control" name="password" id="password"  required="required" data-parsley-required-message="Password is required" data-parsley-maxlength="100">
+                            <label class="sr-only">Confirm Password</label>
+                            <input type="password" placeholder="Confirm Password" class="form-control" name="cpassword" id="cpassword" required="required" data-parsley-required-message="Confirm Password is required" data-parsley-maxlength="100" data-parsley-equalto="#password" data-parsley-equalto-message="Password and Confirm Password should be same">
+                        </div>
+                        <button type="submit" class="btn btn-lg btn-primary btn-block" title="Registration">Registration</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#register').parsley();
+    });
+</script>
+
+<% include ../partials/footer %>
+
+
